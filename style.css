@@ -1,0 +1,50 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font: 1.6rem "Helvetica Neue";
+  height: 100vh;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-areas: "header" "main" "footer";
+}
+
+.header {
+  grid-area: header;
+  color: #fff;
+  background-color: #203040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.brand a {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a {
+  color: white;
+  text-decoration: none;
+}
+.header-links a:hover {
+  color: #ff8000;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #203040;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
