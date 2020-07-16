@@ -3,7 +3,6 @@ import { data } from "../data";
 import { Link } from "react-router-dom";
 
 export const ProductScreen = (props) => {
-  console.log(props.match.params.id);
   const product = data.products.find((el) => el._id === props.match.params.id);
   const hi = "<<";
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import { HomeScreen } from "./Screens/HomeScreen.js";
-import { ProductScreen } from "./Screens/ProductScreen.js";
+import { HomeScreen } from "./screens/HomeScreen.js";
+import { ProductScreen } from "./screens/ProductScreen.js";
 
 function App() {
   const openMenu = () => {
@@ -32,10 +32,10 @@ function App() {
             </button>
             <ul>
               <li>
-                <a href="">Pants</a>
+                <a href="#">Pants</a>
               </li>
               <li>
-                <a href="">Shirts</a>
+                <a href="#">Shirts</a>
               </li>
             </ul>
           </aside>
