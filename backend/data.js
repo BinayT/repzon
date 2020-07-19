@@ -9,6 +9,7 @@ export const data = {
       price: 60,
       rating: 4,
       numReviews: 10,
+      countInStock: 0,
     },
     {
       _id: "2",
@@ -19,6 +20,7 @@ export const data = {
       price: 30,
       rating: 4.5,
       numReviews: 10,
+      countInStock: 10,
     },
     {
       _id: "3",
@@ -29,6 +31,7 @@ export const data = {
       price: 80,
       rating: 3,
       numReviews: 10,
+      countInStock: 3,
     },
   ],
 };
