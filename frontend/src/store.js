@@ -5,10 +5,13 @@ import {
   productDetailsReducer,
 } from "./reducers/productReducer";
 
+import { cartReducers } from "./reducers/cartReducers";
+
 const initialState = {};
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
+  cart: cartReducers,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

@@ -1,11 +1,19 @@
-import React from 'react'
+import { CART_ADD_ITEM } from "../constants/cartConstants";
 
-export const cartReducers = (state={cartItems:[]},action) => {
-    switch (action.type) {
-        case ADD_TO_CART:
-            const item=action.payload;
-            const product=state.cartItems.find(el=>el.product === item.product);
-            product ? 
-            state.cartItems.map(el=>el.product===product.product?product:el)
-    }
-}
+export const cartReducers = (state = { cartItems: [] }, action) => {
+  switch (action.type) {
+    case CART_ADD_ITEM:
+      const item = action.payload;
+      const product = state.cartItems.find((el) => el.product === item.product);
+      if (product) {
+        return {
+          cartItems: state.cartItems.map((el) =>
+            el.product === product.product ? item : el
+          ),
+        };
+      }
+      return { cartItems: [...state.cartItems, item] };
+    default:
+      return state;
+  }
+};

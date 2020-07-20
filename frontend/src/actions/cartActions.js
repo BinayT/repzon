@@ -1,4 +1,5 @@
 import axios from "axios";
+import { CART_FAIL, CART_ADD_ITEM } from "../constants/cartConstants";
 const addToCart = (productId, qty) => async (dispatch) => {
   try {
     const { data } = await axios.get("/api/products/" + productId);
@@ -10,8 +11,12 @@ const addToCart = (productId, qty) => async (dispatch) => {
         image: data.image,
         price: data.price,
         countInStock: data.countInStock,
-        qty: data.qty,
+        qty,
       },
     });
+  } catch (error) {
+    dispatch({ type: CART_FAIL, payload: error.message });
   }
 };
+
+export default addToCart;
